@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ft-package
+Version: 0.0.1
+Summary: Un package pour compter les occurrences dans une liste
+Author: abourdon
+Author-email: abourdon@42.fr
+License: MIT
