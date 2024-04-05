@@ -2,6 +2,17 @@ Metadata-Version: 2.1
 Name: ft-package
 Version: 0.0.1
 Summary: Un package pour compter les occurrences dans une liste
+Home-page: https://github.com/kolitoo/Python-Data-Piscine42/tree/main/Module_00/ex09
 Author: abourdon
 Author-email: abourdon@42.fr
-License: MIT
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+
+UNKNOWN
+

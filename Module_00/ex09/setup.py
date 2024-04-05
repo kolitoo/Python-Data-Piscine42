@@ -1,20 +1,22 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='ft_package',  # Utiliser des tirets au lieu de underscores pour le nom
+    name='ft_package',
     version='0.0.1',
-    summary="Un package pour compter les occurrences dans une liste",
-    home_page="https://github.com/abourdon/ft-package",  # Ajoutez l'URL de la page d'accueil de votre package
+    description='Un package pour compter les occurrences dans une liste',
     author='abourdon',
     author_email="abourdon@42.fr",
-    license="MIT",
-    location="/opt/homebrew/lib/python3.11/site-packages",
-    requires="",  # Laisser vide pour le moment
-    required_by="",  # Laisser vide pour le moment
-    metadata_version="2.1",
-    installer="pip",
-    classifiers=[],  # Assurez-vous de remplir cette liste avec les classifiers appropriés
-    entry_points={},  # Laisser vide pour le moment
+    url="https://github.com/kolitoo/Python-Data-Piscine42/tree/main/Module_00/ex09",
     packages=find_packages(),
-    description='Un package pour compter les occurrences dans une liste',
+    classifiers=[
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+    ],
+    entry_points={
+        'console_scripts': [],
+    },
 )

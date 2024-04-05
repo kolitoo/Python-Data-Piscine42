@@ -2,4 +2,5 @@ setup.py
 ft_package.egg-info/PKG-INFO
 ft_package.egg-info/SOURCES.txt
 ft_package.egg-info/dependency_links.txt
+ft_package.egg-info/entry_points.txt
 ft_package.egg-info/top_level.txt
