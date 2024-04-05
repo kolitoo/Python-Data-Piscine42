@@ -18,6 +18,8 @@ def main():
     try:
         path = sys.argv[1]
         df = load(path)
+        if df is None:
+            raise AssertionError("Loading failed.")
 
         df_france = df[df['country'] == 'France']
         df_belgium = df[df['country'] == 'Belgium']
