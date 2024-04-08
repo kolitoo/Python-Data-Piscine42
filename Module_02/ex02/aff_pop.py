@@ -1,8 +1,6 @@
 from load_csv import load
 import sys
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
-import pandas as pd
 
 
 def millions_formatter(x, pos):
@@ -16,15 +14,20 @@ def main():
     """
     """
     try:
-        path = sys.argv[1]
+        if len(sys.argv) == 2:
+            path = sys.argv[1]
+        else:
+            path = "population_total.csv"
         df = load(path)
         if df is None:
             raise AssertionError("Loading failed.")
 
         df_france = df[df['country'] == 'France']
         df_belgium = df[df['country'] == 'Belgium']
+        print(df_france)
+        print(df_belgium)
         index_2050 = df_france.columns.get_loc('2050')
-        
+
         df_france_years = df_france.columns[1:index_2050 + 1]
         df_belgium_years = df_belgium.columns[1:index_2050 + 1]
         df_france_population = df_france.values[0][1:index_2050 + 1].flatten()
@@ -34,13 +37,13 @@ def main():
 
         plt.plot(df_belgium_years, df_belgium_population, label='Belgium')
         plt.plot(df_france_years, df_france_population, label='France')
-        plt.title("Population Projections of {} and {}".format("France", "Belgium"))
+        plt.title("Population Projections of {} \
+                and {}".format("France", "Belgium"))
         plt.xlabel("Year")
         plt.xticks(df_france_years[::40])
         plt.ylabel("Population")
         y_ticks = [int(val / 1000000) for val in range(0, 70000001, 10000000)]
         y_ticks_labels = [f"{val}M" for val in y_ticks]
-        print(y_ticks_labels)
         plt.yticks([val * 1e6 for val in y_ticks], y_ticks_labels)
         plt.tight_layout()
         plt.legend(loc='lower right')

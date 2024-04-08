@@ -1,7 +1,7 @@
 from load_csv import load
-import pandas as pd
 import sys
 import matplotlib.pyplot as plt
+
 
 def main():
     """
@@ -15,7 +15,11 @@ def main():
 
     """
     try:
-        df = load(sys.argv[1])
+        if len(sys.argv) == 2:
+            path = sys.argv[1]
+        else:
+            path = "life_expectancy_years.csv"
+        df = load(path)
         if df is None:
             raise AssertionError("Loading failed.")
         data_france = df[df['country'] == 'France']

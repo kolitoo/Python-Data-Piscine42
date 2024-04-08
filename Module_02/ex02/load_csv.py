@@ -1,7 +1,8 @@
 import pandas as pd
 import os
 
-def load(path: str) -> pd.DataFrame :
+
+def load(path: str) -> pd.DataFrame:
     """
     This fonction load a .csv, print the dimensions and print it.
     """
